@@ -11,3 +11,6 @@ cat subnetdetails-$region.log | jq -r '.[] | [."freeform-tags"."lm", ."id", ."vc
 
 echo "[."freeform-tags"."lm", ."id", ."vcn-id", ."display-name", ."subnet-domain-name", ."prohibit-public-ip-on-vnic", ."cidr-block"]" > subnetdetails-global.csv
 cat subnetdetails-$region.csv >> subnetdetails-global.csv
+rm -f subnets-$region.log
+rm -f subnetdetails-$region.log
+rm -f subnetdetails-$region.csv
